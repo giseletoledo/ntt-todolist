@@ -17,6 +17,10 @@ export class TodoService {
     this.todos.push(todo);
   }
 
+  done(id: number) {
+    this.todos[id].isCompleted = !this.todos[id].isCompleted;
+  }
+
   deleteTodo(id: number) {
     this.todos = this.todos.filter(t => t.id !== id);
   }

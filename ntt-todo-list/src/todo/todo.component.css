@@ -1,5 +1,13 @@
 th,td{
-  text-align: center;
   line-height: 35px;
   background-color: rgb(242, 231, 252);
+}
+
+.btn.btn-danger {
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+.done {
+  text-decoration: line-through;
 }

@@ -36,6 +36,10 @@ export class TodoComponent {
     this.newTodo = '';
   }
 
+  done(id: number) {
+    this.todoService.done(id);
+  }
+
   deleteTodo(id: number) {
     this.todoService.deleteTodo(id);
     this.todos = this.todos.filter(t => t.id !== id);
