@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-6">
+      <div class="input-group mb-3">
+        <input type="text" [(ngModel)]="newTodo" name="adicionar" id="adicionar" class="form-control" placeholder="Adicionar tarefa" aria-label="Adicionar tarefa">
+        <button (click)="addTodo()" class="btn btn-primary" type="button">Adicionar tarefa</button>
+      </div>
+
+      <table class="table table-striped">
+        <tbody>
+          <tr  *ngFor="let todo of todos; let i = index;">
+            <th scope="row">{{todo.id}}</th>
+            <td>{{todo.title}}</td>
+            <td class="btnRemover d-flex justify-content-end" (click)="deleteTodo(todo.id)">
+
+              <button class="btn btn-danger" type="button">Remover</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
